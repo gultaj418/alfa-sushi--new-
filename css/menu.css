@@ -1,0 +1,27 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  justify-content: center;
+}
+
+.card-menu {
+  margin-left: 70px;
+  position: relative;
+}
+
+/* .card-menu:before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: 20px;
+  height: 1px;
+  width: 163px;
+  border-bottom: 1px solid magenta;
+} */
