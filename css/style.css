@@ -642,6 +642,7 @@ p {
 .plus.active,
 .count-num.active {
   /* background-color: red; */
+  background-color: var(--fade-button);
   padding: 0;
 }
 
