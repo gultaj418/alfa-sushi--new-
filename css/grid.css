@@ -1,0 +1,80 @@
+.nav-header {
+  width: 90%;
+  padding: 0 5%;
+  justify-content: space-between;
+}
+.nav-header .logo {
+  margin-left: 0rem;
+}
+.first-line-menu {
+  margin-right: 0rem;
+}
+#lang {
+  margin-right: 0;
+}
+.main-list {
+  /* margin: 0 0; */
+  display: flex;
+  width: 90%;
+  padding: 0 5%;
+  justify-content: flex-end;
+}
+.list-cards {
+  width: 90%;
+  padding: 0 5%;
+  justify-content: space-between;
+}
+.cards {
+  margin: 2rem 0;
+}
+
+.contact {
+  justify-content: space-between;
+  padding: 0 5%;
+  width: 90%;
+}
+.contact-content {
+  display: flex;
+}
+.contact-map {
+  transform: translateY(0);
+}
+.count-num {
+  background-color: white;
+}
+
+.footer {
+  width: 90%;
+  padding: 3% 5%;
+  justify-content: space-between;
+  align-items: center;
+}
+.branches {
+  gap: 0 114px;
+}
+.branch::after {
+  right: -10px;
+  width: 3px;
+  height: 43px;
+}
+.branches span {
+  display: block;
+  text-align: end;
+  font-size: 14px;
+}
+.footer .branch {
+  margin: 0 0;
+}
+.branch h4 {
+  margin: 0 0;
+  font-size: 18px;
+}
+.footer .logo img {
+  margin: 0 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .contact-map {
+    display: none;
+  }
+}

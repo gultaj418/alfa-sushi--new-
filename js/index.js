@@ -13,18 +13,11 @@ const blackMobileMenu = document.querySelector(".black-menu");
 const bagCounter = document.querySelector("#bag");
 const downIcon = document.querySelector(".arrow-down-icon");
 const upIcon = document.querySelector(".arrow-up-icon");
-<<<<<<< HEAD
 const x = window.matchMedia("(max-width: 768px)");
 let searchInput = document.querySelector(".search-input");
 let hamburgerHeavy = document.querySelector(".hamburger-heavy");
 // const blackMobileMenu = document.querySelector(".black-menu");
 let mobileHeavy = document.querySelector(".mobile-heavy");
-=======
-const upIconOffset = upIcon.offsetHeight;
-let hamburgerHeavy = document.querySelector(".hamburger-heavy");
-let mobileHeavy = document.querySelector(".mobile-heavy");
-let mql = window.matchMedia("(max-width: 768px)");
->>>>>>> 63bcb64e0abe796fb023a8e8ccb0cff298c45639
 
 console.log(search);
 hamburger.addEventListener("click", () => {
@@ -32,10 +25,7 @@ hamburger.addEventListener("click", () => {
   mobileHeavy.classList.add("heavy-background");
   hamburgerHeavy.classList.add("btn-active");
   document.body.style.overflowY = ["hidden"];
-<<<<<<< HEAD
   blackMobileMenu.classList.add("btn-active");
-=======
->>>>>>> 63bcb64e0abe796fb023a8e8ccb0cff298c45639
 });
 
 hamburgerHeavy.addEventListener("click", () => {
@@ -48,15 +38,9 @@ hamburgerHeavy.addEventListener("click", () => {
 //Language changer
 
 langChanger.addEventListener("click", () => {
-<<<<<<< HEAD
   langSection.classList.toggle("active");
   svgRotator.classList.toggle("active");
   langChanger.classList.toggle("active");
-=======
-  langSection.classList.add("active");
-  svgRotator.classList.add("active");
-  langChanger.classList.add("active");
->>>>>>> 63bcb64e0abe796fb023a8e8ccb0cff298c45639
   langSection.addEventListener("click", (e) => {
     lang = langSection.querySelector(".language.active");
     if (lang !== null) {
@@ -80,10 +64,7 @@ search.addEventListener("click", () => {
   search.classList.add("deactive");
   searchBar.classList.add("active");
   searchInput.classList.add("active");
-<<<<<<< HEAD
   console.log(searchBar);
-=======
->>>>>>> 63bcb64e0abe796fb023a8e8ccb0cff298c45639
 });
 searchBar.addEventListener(
   "focusout",
@@ -168,20 +149,13 @@ minusOrder.forEach(function (el) {
 //slider responsive
 
 $(document).ready(function () {
-<<<<<<< HEAD
   if (window.matchMedia("(max-width: 780px)").matches) {
     $(".list-cards.owl-carousel").owlCarousel({
       margin: 0,
-=======
-  if (window.matchMedia("(max-width: 768px)").matches) {
-    $(".owl-carousel").owlCarousel({
-      margin: 40,
->>>>>>> 63bcb64e0abe796fb023a8e8ccb0cff298c45639
       responsiveClass: true,
       responsive: {
         0: {
           items: 1,
-<<<<<<< HEAD
           margin: 10,
           stagePadding: 30,
         },
@@ -207,21 +181,12 @@ $(document).ready(function () {
           items: 1,
           margin: 0,
           stagePadding: 90,
-=======
-        },
-        600: {
-          items: 1,
-        },
-        1000: {
-          items: 3,
->>>>>>> 63bcb64e0abe796fb023a8e8ccb0cff298c45639
         },
       },
     });
   }
 });
 
-<<<<<<< HEAD
 $(".list-card-slider.owl-carousel").owlCarousel({
   loop: true,
 
@@ -249,17 +214,6 @@ $(".list-card-slider.owl-carousel").owlCarousel({
       loop: true,
     },
   },
-=======
-var owl = $("ul.owl-carousel");
-owl.owlCarousel({
-  items: 5,
-
-  loop: true,
-  // margin: 10,
-  autoplay: true,
-  autoplayTimeout: 1500,
-  autoplayHoverPause: true,
->>>>>>> 63bcb64e0abe796fb023a8e8ccb0cff298c45639
 });
 
 //smooth beahvior scroll

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @media only screen and (max-width: 1250px) {
   .second-header {
     justify-content: space-between;
@@ -284,7 +283,7 @@
   }
 
   .nav-header {
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .nav-header .logo {
     margin-left: 0rem !important;
@@ -340,27 +339,6 @@
     margin-left: 20px;
   }
 
-=======
-/*------------------------ home page css------------------------------------ */
-
-@media only screen and (max-width: 1000px) {
-  .contact-map {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 650px) {
-  .nav-header {
-    justify-content: space-around;
-  }
-  .nav-header .logo {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .logo .img {
-    margin-left: 0% !important;
-  }
->>>>>>> 63bcb64e0abe796fb023a8e8ccb0cff298c45639
   #lang,
   #search {
     visibility: hidden;
@@ -402,7 +380,6 @@
     margin-right: 0;
   }
 
-<<<<<<< HEAD
   .menu-content ul {
     display: flex;
     /* flex-direction: row; */
@@ -412,10 +389,6 @@
     align-items: center;
     margin-left: 20px;
     margin-right: 10px;
-=======
-  .main-list {
-    display: none;
->>>>>>> 63bcb64e0abe796fb023a8e8ccb0cff298c45639
   }
 
   .black-menu.active {
@@ -425,7 +398,6 @@
     margin-right: 1rem;
     transition-delay: 0.25s;
   }
-<<<<<<< HEAD
 
   .menu-content ul li {
     /* margin-right: 10px; */
@@ -452,27 +424,6 @@
   }
   .add-item {
     margin: 30px 80px;
-=======
-  .contact-map {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .order-bar {
-    display: none;
-  }
-
-  .cards {
-    width: 470px;
-    display: flex;
-    flex-direction: row-reverse;
-    /* border-radius: 5px; */
-    /* margin-top: 30px; */
-    border: 1px solid #c4c4c4b2;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
->>>>>>> 63bcb64e0abe796fb023a8e8ccb0cff298c45639
   }
   .footer {
     align-items: center;
@@ -492,24 +443,7 @@
     flex-direction: row;
   }
 
-<<<<<<< HEAD
   .chef-left-card {
-=======
-  .second-line-menu {
-    display: none;
-  }
-
-  .branches {
-    display: none;
-  }
-  .tag {
-    width: 100%;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  .contact {
->>>>>>> 63bcb64e0abe796fb023a8e8ccb0cff298c45639
     flex-direction: column;
   }
   .contact .contact-hr {
@@ -538,7 +472,6 @@
     display: none;
   }
 
-<<<<<<< HEAD
   .container-about {
     width: auto;
   }
@@ -547,20 +480,6 @@
 
   .tag-order {
     margin-bottom: 0;
-=======
-  .contact-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card-mobile {
-    box-shadow: 0px 2px 4px rgba(187, 187, 187, 0.25);
-    width: 370px;
-    /* padding-bottom: 20px; */
-    border-radius: 5px;
-    margin-bottom: 0px;
-    display: block;
->>>>>>> 63bcb64e0abe796fb023a8e8ccb0cff298c45639
   }
 
   .menu-content.order-bar ul {
@@ -923,7 +842,6 @@
     width: 310px;
     height: 220px;
   }
-<<<<<<< HEAD
 
   .order-box-mini img {
     width: 140px;
@@ -1308,7 +1226,7 @@
     width: 100%;
   }
   .nav-header {
-    justify-content: space-around !important;
+    justify-content: space-between;
   }
   .nav-header .logo {
     margin-left: 0rem !important;
@@ -1517,6 +1435,4 @@
     width: 210px;
     height: 210px;
   }
-=======
->>>>>>> 63bcb64e0abe796fb023a8e8ccb0cff298c45639
 }
