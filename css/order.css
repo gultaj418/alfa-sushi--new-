@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
 }
+/* .order-paragraph{
+  margin-left: 12px
+} */
 .order-box {
   width: 470px;
   display: flex;

@@ -328,6 +328,10 @@
     margin-left: 0px !important;
     margin-right: 0 !important;
   }
+  .second-line-menu {
+    display: none;
+  }
+
 
   .contact {
     flex-direction: column;
@@ -352,6 +356,19 @@
   .footer .logo img {
     margin-left: 0px;
     margin-top: 0px;
+  }
+  .call {
+    display: flex;
+  }
+  .arrow-down-icon {
+    right: 42%;
+    display: flex;
+    bottom: 20px;
+    position: absolute;
+  }
+
+  .arrow-up-icon {
+    margin-left: 0px;
   }
 
   .hamburger-menu {
@@ -379,6 +396,7 @@
     margin-left: 0px;
     margin-right: 0;
   }
+  
 
   .menu-content ul {
     display: flex;
@@ -398,7 +416,17 @@
     margin-right: 1rem;
     transition-delay: 0.25s;
   }
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
 
+  .menu-cards{
+    margin-left: 0;
+  }
+  .card-menu{
+    margin-left: 0;
+  }
   .menu-content ul li {
     /* margin-right: 10px; */
     line-height: 20px;
@@ -723,6 +751,7 @@
     margin-bottom: 0px;
     box-shadow: none;
     border-bottom: 1px solid var(--light-grey);
+    margin: 0;
   }
   .count-x,
   #add-comment,
@@ -980,6 +1009,13 @@
   }
 }
 
+
+@media only screen and (max-width:380px){
+  .order-total-box{
+    width:320px
+  }
+}
+
 @media only screen and (max-width: 370px) {
   .discount-img img {
     margin-left: 30px;
@@ -1050,6 +1086,12 @@
   .card-paragraph {
     width: calc(100vw - 140px);
   }
+  .order-total-box{
+    width:280px
+  }
+  .order-total-box button {
+    width: 260px;
+}
 }
 
 @media only screen and (max-width: 300px) {
@@ -1320,7 +1362,7 @@
   }
 
   .cards img {
-    width: 170px;
+    width: 160px;
     height: 130px;
     margin-top: 0px;
   }

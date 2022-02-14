@@ -31,7 +31,7 @@ body {
   border-radius: 50%;
 
   background-color: var(--black-background);
-  z-index: 999;
+  z-index: 6;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -49,7 +49,7 @@ body {
   display: flex;
   justify-content: end;
   padding-bottom: 20px;
-  margin-right: 50px;
+  margin-right: 25px;
 }
 
 .arrow-down-icon.active {
@@ -634,6 +634,7 @@ p {
   padding: 0.6rem 3rem;
   cursor: pointer;
   margin: 0 0.3rem;
+  border-radius: 5px;
 }
 /* .count-num {
     padding: 0.6rem 3.9rem;
@@ -655,7 +656,7 @@ p {
   height: 40px;
   /* gap: 0 25px; */
   border-radius: 5px;
-  margin-left: 15px;
+  /* margin-left: 15px; */
 }
 .count-regulator.active {
   background-color: var(--fade-button);
