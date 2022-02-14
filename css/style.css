@@ -491,15 +491,15 @@ li#search.deactive {
 .old-price {
   text-decoration: line-through;
   color: #838383;
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 1000;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 .new-price {
   color: #f47f72;
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 1000;
-  margin-left: 10px;
+  margin-left: 4px;
 }
 
 .discount-add-order {
