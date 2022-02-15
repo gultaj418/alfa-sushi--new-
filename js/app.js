@@ -7,7 +7,7 @@ $(function () {
     autostart: true,
     property: "value",
     onComplete: null,
-    duration: 20000,
+    duration: 30000,
     padding: 10,
     marquee_class: ".marquee",
     container_class: ".simple-marquee-container",

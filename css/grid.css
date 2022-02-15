@@ -80,9 +80,9 @@
 }
 
 @media screen and (max-width: 1330px) {
-  .list-cards {
+  /* .list-cards {
     justify-content: center;
-  }
+  } */
 }
 
 @media screen and (max-width: 1000px) {
@@ -98,7 +98,7 @@
     gap: 0;
     justify-content: space-between;
   }
-  .cards {
+  .card-new {
     justify-content: space-between;
     margin: 0 0;
     width: 100%;

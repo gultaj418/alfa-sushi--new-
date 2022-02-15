@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="./owl.carousel.min.css" />
     <link rel="stylesheet" href="./owl.theme.default.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/marquee.css">
     
-    <link rel="stylesheet" href="./css/grid.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/grid.css" />
 
     <title>Home</title>
   </head>
@@ -66,6 +67,7 @@
         </div>
         <div class="first-line-menu">
           <ul>
+            
             <li id="search">SEARCH</li>
             <li class="bag-count"><a id="bag" href="order.html"> BAG(0)</a></li>
 
@@ -111,17 +113,20 @@
           <li><a href="about-us.html">HAQQIMIZDA</a></li>
         </ul>
       </nav>
-      <div class="second-line-menu">
-        <ul >
-          <li>SUSHI ROLL</li>
+      <div class="simple-marquee-container">
+        <!-- <div class="marquee-sibling"></div> -->
+        <div class="marquee">
+          <ul class="marquee-content-items">
+            <li>SUSHI ROLL</li>
 
-          <li>NIGIRI</li>
-          <li>COLD SUSHI</li>
+            <li>NIGIRI</li>
+            <li>COLD SUSHI</li>
 
-          <li>BALIK EKMEK</li>
+            <li>BALIK EKMEK</li>
 
-          <li>FRIED RICE</li>
-        </ul>
+            <li>FRIED RICE</li>
+          </ul>
+        </div>
       </div>
       <div class="language-search-mobile">
         <div class="language-section-mobile">
@@ -129,33 +134,12 @@
           <div class="language">Azerbaijani <i></i></div>
           <div class="language">RUssian <i></i></div>
         </div>
-        <!-- <div class="search-bar-mobile">
-          <span class="search">Search</span>
-          <div class="search-input">
-            <input type="text" placeholder="TYPE HERE" />
-            <button>
-              <svg
-                width="8"
-                height="15"
-                viewBox="0 0 8 15"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 14L6.61364 7.5L0.999999 1"
-                  stroke="#838383"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-        </div> -->
+
         <div class="search">
           <li class="search-text">Search</li>
         </div>
       </div>
+      
       <div class="black-menu">
         <ul>
           <li><a href="menu.html"> MENU</a></li>
@@ -264,7 +248,7 @@
       </div>
 
       <div class="list-cards">
-        <div class="cards">
+        <div class="cards card-new">
           <img
             class="product-img"
             src="./assets/images/sushi-card-1.jpg"
@@ -293,7 +277,7 @@
             </div>
           </div>
         </div>
-        <div class="cards card-middle">
+        <div class="cards card-middle card-new">
           <img
             class="product-img"
             src="./assets/images/sushi-card-1.jpg"
@@ -322,7 +306,7 @@
             </div>
           </div>
         </div>
-        <div class="cards">
+        <div class="cards card-new">
           <img
             class="product-img"
             src="./assets/images/sushi-card-1.jpg"
@@ -616,5 +600,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./owl.carousel.min.js"></script>
     <script src="/js/index.js"></script>
+    <script src="./js/marquee.js"></script>
+    <script src="./js/app.js"></script>
   </body>
 </html>
