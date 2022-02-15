@@ -1,6 +1,8 @@
 //defining variables
-
+const rightArrowSearch = document.querySelector(".rightArrowSearch");
+const searchCloseMobile = document.querySelector(".searchCloseMobile");
 const search = document.querySelector("#search");
+const searchMobile = document.querySelector(".search-text");
 const searchBar = document.querySelector(".search-bar");
 const plusOrder = document.querySelectorAll(".plus");
 const minusOrder = document.querySelectorAll(".minus");
@@ -16,6 +18,7 @@ const upIcon = document.querySelector(".arrow-up-icon");
 const x = window.matchMedia("(max-width: 768px)");
 let searchInput = document.querySelector(".search-input");
 let hamburgerHeavy = document.querySelector(".hamburger-heavy");
+const mobileLanguage = document.querySelector(".language-search-mobile");
 // const blackMobileMenu = document.querySelector(".black-menu");
 let mobileHeavy = document.querySelector(".mobile-heavy");
 
@@ -26,13 +29,30 @@ hamburger.addEventListener("click", () => {
   hamburgerHeavy.classList.add("btn-active");
   document.body.style.overflowY = ["hidden"];
   blackMobileMenu.classList.add("btn-active");
+  mobileLanguage.classList.add("active");
 });
 
 hamburgerHeavy.addEventListener("click", () => {
   blackMobileMenu.classList.remove("btn-active");
+  mobileLanguage.classList.remove("active");
+
   mobileHeavy.classList.remove("heavy-background");
   hamburgerHeavy.classList.remove("btn-active");
   document.body.style.overflowY = ["scroll"];
+  searchBar.classList.remove("active");
+  searchInput.classList.remove("active");
+  searchBar.classList.remove("mobile-active");
+  searchInput.classList.remove("active");
+});
+
+searchMobile.addEventListener("click", (e) => {
+  searchBar.classList.add("mobile-active");
+  rightArrowSearch.classList.add("deactive");
+  searchCloseMobile.classList.add("active");
+  searchInput.classList.add("active");
+
+  blackMobileMenu.classList.remove("btn-active");
+  mobileLanguage.classList.remove("active");
 });
 
 //Language changer
@@ -42,7 +62,7 @@ langChanger.addEventListener("click", () => {
   svgRotator.classList.toggle("active");
   langChanger.classList.toggle("active");
   langSection.addEventListener("click", (e) => {
-    lang = langSection.querySelector(".language.active");
+    let lang = langSection.querySelector(".language.active");
     if (lang !== null) {
       lang.classList.remove("active");
     }
@@ -50,12 +70,6 @@ langChanger.addEventListener("click", () => {
     langChanger.textContent = e.target.textContent;
   });
 });
-// langChanger.addEventListener("focusout", () => {
-//   console.log("hello");
-//   langSection.classList.remove("active");
-//   svgRotator.classList.remove("active");
-//   langChanger.classList.remove("active");
-// });
 
 //EventListeners
 
@@ -70,10 +84,12 @@ searchBar.addEventListener(
   "focusout",
   () => {
     let searchInput = searchBar.querySelector(".search-input");
-
+    searchBar.classList.remove("mobile-active");
     search.classList.remove("deactive");
     searchBar.classList.remove("active");
     searchInput.classList.remove("active");
+    blackMobileMenu.classList.add("btn-active");
+    mobileLanguage.classList.add("active");
   },
   false
 );
