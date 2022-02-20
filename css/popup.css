@@ -3,12 +3,7 @@ body{
   justify-content: center;
   align-items: center;
 }
-.count-x {
-    margin-left: 10px;
-    font-weight: bold;
-    font-size: 15px;
-    color: var(--faded-red);
-}
+
 
  .popup-img-container{
      width: 300px;
@@ -21,6 +16,13 @@ body{
  .popup-content{
    padding-top: 8px;
  }
+
+ .count-x {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  color: var(--faded-red);
+}
 
  
     .order-name {

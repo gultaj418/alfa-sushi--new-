@@ -28,6 +28,8 @@ li{
   list-style-type: none;
 }
 
+/* -------------------------page arrow down and up and call css-------------------------------- */
+
 .arrow-icon {
   width: 60px;
   height: 60px;
@@ -62,6 +64,24 @@ li{
   align-items: center;
 }
 
+.call {
+  background-color: var(--context-red);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 30px;
+  right: 25px;
+  display: none;
+  z-index: 9;
+}
+
+/* -------------------------------------------------------hamburger menu css-------------------------------------------------------- */
+
+
 .hamburger-menu {
   display: none;
   z-index: 9;
@@ -92,6 +112,7 @@ li{
 .mobile-heavy .hamburger-heavy .line:last-child {
   transform: rotateZ(-45deg);
 }
+
 .mobile-heavy {
   position: absolute;
   top: 0;
@@ -99,12 +120,12 @@ li{
   /* opacity: 0; */
   opacity: 1;
   /* margin-left: 400%; */
-  transform: translateX(100%);
+  transform: translateX(-100%);
   z-index: 10;
 
   height: 100vh;
   width: 0%;
-  transition: 800ms transform ease;
+  transition: 800ms all ease;
   background-color: var(--black-background);
 }
 
@@ -134,6 +155,111 @@ li{
   visibility: visible;
 }
 
+.black-menu {
+ 
+  position: relative;
+    /* top: 30%; */
+    /* right: 30px; */
+    width: 90%;
+    padding: 0 5%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 400ms ease;
+    margin-right: 0rem;
+    z-index: 11;
+    display: none;
+
+  
+}
+.black-menu ul li {
+  list-style-type: none;
+  text-align: end;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 28px;
+}
+.black-menu ul li a {
+  display: inline-block;
+  transition: margin-bottom 400ms ease;
+  color: var(--text-white);
+  text-decoration: none;
+  font-size: 24px;
+}
+.black-menu.btn-active {
+  visibility: visible;
+  opacity: 1;
+  transition: all 800ms ease;
+  margin-right: 1rem;
+  transition-delay: 0.25s;
+}
+
+/*---------------------------------------mobile lang css---------------------------------*/
+#mobLang{
+  text-transform: uppercase;
+}
+.rightArrowSearch.deactive {
+  display: none;
+}
+
+.searchCloseMobile {
+  display: none;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+.searchCloseMobile.active {
+  display: inline;
+}
+
+.search-text{
+  color: var(--text-white);
+}
+
+.language-search-mobile {
+  z-index: -9999;
+  position: relative;
+  padding: 0 5%;
+  display: flex;
+  width: 90%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 400ms ease;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+
+.language-section-mobile {
+  top: 30px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  display: none;
+}
+
+.language-section-mobile.active {
+  /* visibility: visible; */
+  display: flex;
+}
+.svg-class-mobile.active {
+  transform: rotate(180deg);
+}
+
+.svg-class-mobile{
+  margin-top: 6px;
+}
+.lang-and-icon{
+  display: flex;
+  gap: 0.5rem;
+
+}
+
+/* ------------------------------------------------------Desktop nav css----------------------------------------------------------------- */
+
 .first-header {
   width: 100%;
 
@@ -154,7 +280,10 @@ li{
 .nav-header .logo {
   margin-left: 6rem;
 }
-
+.logo img {
+  margin-left: 10%;
+  margin-top: 20px;
+}
 #bag {
   text-decoration: none;
   color: var(--text-white);
@@ -164,8 +293,13 @@ li{
 #bag:hover {
   color: var(--context-red);
 }
-
-
+.search-bar {
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  width: 0;
+  /* transition: all 200ms ease; */
+}
 
 .search-bar.active {
   visibility: visible;
@@ -203,7 +337,6 @@ li{
 .search-input input {
   flex: 1;
 }
-
 .search-input input,
 button {
   border: 0;
@@ -212,88 +345,12 @@ button {
   padding: 0 1.7rem;
 }
 
-.search-bar {
-  position: relative;
-  visibility: hidden;
-  opacity: 0;
-  width: 0;
-  /* transition: all 200ms ease; */
-}
-
-
-.logo img {
-  margin-left: 10%;
-  margin-top: 20px;
+#arrow-lang{
+  transition: all 400ms ease;
 }
 
 #arrow-lang:hover {
   stroke: var(--context-red);
-}
-
-.language-search-mobile {
-  z-index: -9999;
-  position: relative;
-  padding: 0 5%;
-  display: flex;
-  width: 90%;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 400ms ease;
-  justify-content: space-between;
-  margin-bottom: 40px;
-  -webkit-transition: all 400ms ease;
-  -moz-transition: all 400ms ease;
-  -ms-transition: all 400ms ease;
-  -o-transition: all 400ms ease;
-}
-
-.language-section-mobile {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-.search-text{
-color: var(--text-white);
-}
-.black-menu {
- 
-  position: relative;
-    /* top: 30%; */
-    /* right: 30px; */
-    width: 90%;
-    padding: 0 5%;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 400ms ease;
-    margin-right: 0rem;
-    z-index: 11;
-    display: none;
-
-  
-}
-
-
-.black-menu ul li {
-  list-style-type: none;
-  text-align: end;
-  cursor: pointer;
-  font-size: 18px;
-  line-height: 28px;
-}
-
-.black-menu ul li a {
-  display: inline-block;
-  transition: margin-bottom 400ms ease;
-  color: var(--text-white);
-  text-decoration: none;
-  font-size: 24px;
-}
-.black-menu.btn-active {
-  visibility: visible;
-  opacity: 1;
-  transition: all 800ms ease;
-  margin-right: 1rem;
-  transition-delay: 0.25s;
 }
 
 .first-line-menu {
@@ -316,11 +373,16 @@ color: var(--text-white);
   cursor: pointer;
   transition: all 400ms ease;
 }
-
 .language {
+  text-transform: uppercase;
   cursor: pointer;
   color: var(--light-grey);
+  margin: 3px 0;
 }
+.language :hover{
+  color: var(--context-red);
+}
+
 
 .language.active {
   color: var(--context-red);
@@ -328,9 +390,9 @@ color: var(--text-white);
 .language-section {
   background-color: var(--black-background);
   position: absolute;
-  top: 33px;
-  right: 130px;
-  width: 100px;
+  top: 18px;
+  right: 0px;
+  width: 150px;
   text-align: center;
   visibility: hidden;
 }
@@ -359,11 +421,19 @@ li#search.deactive {
   justify-content: end;
 }
 
+.lang-arrow{
+  margin-left: 10px;
+}
+
 #lang.active {
   background-color: var(--black-background);
 }
+.svg-class{
+  margin-left: 10px;
+}
 
 .svg-class.active {
+ 
   transform: rotate(180deg);
 }
 
@@ -371,11 +441,13 @@ li#search.deactive {
   transition: all 400ms ease;
 }
 
-#lang:hover svg path {
-  stroke: #d24a43;
-
-  /* transform: rotate(180deg); */
+#lang:hover+svg path{
+  stroke: var(--context-red);
 }
+
+/* -----------------------Desktop headers css (first section)--------------------------- */
+
+
 
 .main-list {
   /* position: relative; */
@@ -408,6 +480,12 @@ li#search.deactive {
   /* height: 40px; */
   margin-bottom: 10px;
 }
+.list-about {
+  position: relative;
+  color: white;
+  margin-top: 223px;
+  margin-right: 150px;
+}
 
 .second-line-menu {
   background-color: var(--black-background);
@@ -438,37 +516,13 @@ li#search.deactive {
   cursor: pointer;
 }
 
-.mobile-heavy {
-  position: absolute;
-  top: 0;
-  visibility: hidden;
-  /* opacity: 0; */
-  opacity: 1;
-  /* margin-left: 400%; */
-  transform: translateX(-100%);
-  z-index: 10;
 
-  height: 100vh;
-  width: 0%;
-  transition: 800ms all ease;
-  background-color: var(--black-background);
-}
-.mobile-heavy.heavy-background {
-  transform: translateX(0%);
-  width: 100%;
-  opacity: 1;
-  visibility: visible;
-}
 
-.owl-item {
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
-  width: fit-content;
-}
+
 /* --------------------------------------------------------------------------------------------- */
 
 /*---------------------------------Discount Section-------------------------------------*/
+
 #discounts {
   padding-top: 100px;
   padding-bottom: 50px;
@@ -517,13 +571,13 @@ li#search.deactive {
 
 .old-price {
   text-decoration: line-through;
-  color: #838383;
+  color: var(--light-grey);
   font-size: 23px;
   font-weight: 1000;
   margin-left: 15px;
 }
 .new-price {
-  color: #f47f72;
+  color: var(--faded-red);
   font-size: 23px;
   font-weight: 1000;
   margin-left: 4px;
@@ -539,12 +593,21 @@ li#search.deactive {
   cursor: pointer;
 }
 
+/*----------------------- owl-css---------------- */
+
+
 .owl-dots {
   width: 100%;
   height: 100%;
   display: flex;
   /* align-items: center; */
   justify-content: center;
+}
+.owl-item {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  width: fit-content;
 }
 
 .list-card-slider.owl-carousel button.owl-dot {
@@ -563,13 +626,8 @@ li#search.deactive {
 
 /* --------------------------------------------------------------------------------------------- */
 
-/* --------------------------------Section new starts-------------------------------------------------- */
+/* --------------------------------Tag section css-------------------------------------------------- */
 
-#discounts {
-  padding-top: 100px;
-  padding-bottom: 50px;
-  margin-top: 100vh;
-}
 .tag {
   /* padding-right: 30px; */
   width: 225px;
@@ -606,6 +664,18 @@ li#search.deactive {
   /* margin-left: 100px; */
 }
 
+.tag-recommended {
+  width: 330px;
+  background-color: var(--black-background);
+  margin-right: 20px;
+}
+.tag-recommended h4,
+.tag-new h4 {
+  margin-left: 100px;
+}
+
+
+/*-------------------------Card recommend and new (index css)-----------------------*/
 .list-cards {
   display: flex;
   flex-direction: row;
@@ -724,37 +794,15 @@ p {
   width: 100%;
 }
 
-.tag-recommended {
-  width: 330px;
-  background-color: var(--context-red);
-  margin-right: 20px;
-}
-.tag-recommended h4,
-.tag-new h4 {
-  margin-left: 100px;
-}
+
 
 /*------------------------------Contact (Get in touch section starts)---------------------------- */
 
-.call {
-  background-color: var(--context-red);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  bottom: 30px;
-  right: 25px;
+.contact-hr {
   display: none;
-  z-index: 9;
+  width: 91%;
+  margin-left: 0;
 }
-
-#contact {
-  /* padding-bottom: 50px; */
-}
-
 .contact {
   display: flex;
   flex-direction: row;
@@ -800,35 +848,6 @@ p {
   margin-left: 62px;
 }
 
-/* 
-.contact-map img {
-  width: 700px;
-  height: 350px;
-  margin-right: 30px;
-}
-
-
-.contact-column-first,
-.contact-column-second {
-  text-transform: uppercase;
-  width: 100%;
-}
-
-.contact-column-first h4,
-.contact-column-second h4 {
-  margin-left: 8px;
-}
-.contact-content p {
-  /* background-color: red; */
-/* color: var(--gray); */
-/* color: #4c4c4c; */
-/* background-color: red; */
-/* text-transform: uppercase;
-  font-size: 13px;
-  font-family: "Helvetica", sans-serif;
-  font-weight: 100;
-  margin: 0;
-} */
 .contact-content .day-open p {
   /* margin-top: 1rem; */
   margin: 0;
@@ -936,11 +955,7 @@ footer {
 .branch-adjami {
   margin-right: 200px;
 }
-
-/*-----------------------------------------------------------------------*/
-/*-----------------------------------------------------------------------*/
-
-/*-----------------------------------Menu page css------------------------------------*/
+/*-----------------------------------Second header css css------------------------------------*/
 
 .second-header {
   width: 100%;
@@ -1004,6 +1019,11 @@ footer {
   margin-left: 10%;
 }
 
+
+
+
+/*------------login/sign and profile/adress continue version css------*/
+
 .continue-version {
   display: flex;
   flex-direction: row;
@@ -1026,17 +1046,4 @@ footer {
 
 .active-continue {
   color: var(--faded-red) !important;
-}
-
-.contact-hr {
-  display: none;
-  width: 91%;
-  margin-left: 0;
-}
-
-.owl-item {
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
-  width: fit-content;
 }

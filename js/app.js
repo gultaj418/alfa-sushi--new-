@@ -14,6 +14,6 @@ $(function () {
     sibling_class: 0,
     hover: true,
     velocity: 0,
-    direction: "right",
+    direction: "left",
   };
 });

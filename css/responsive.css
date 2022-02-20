@@ -1,3 +1,5 @@
+
+
 @media only screen and (max-width: 1250px) {
   .second-header {
     justify-content: space-between;
@@ -269,6 +271,12 @@
 }
 
 @media only screen and (max-width: 650px) {
+  .main-list ul{
+    display: none;
+  }
+  .lang-arrow{
+    display: none;
+  }
 
   .black-menu.btn-active {
     visibility: visible;
@@ -283,6 +291,18 @@
     visibility: visible;
     opacity: 1;
 }
+
+.search-bar.mobile-active {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  opacity: 1;
+  visibility: visible;
+  width: 70%;
+  /* left: 50%; */
+  top: 25%;
+}
+
   .search-bar{
     display: none;
   }
@@ -345,9 +365,7 @@
     margin-left: 0px !important;
     margin-right: 0 !important;
   }
-  .second-line-menu {
-    display: none;
-  }
+  
 
 
   .contact {
@@ -374,15 +392,7 @@
     margin-left: 0px;
     margin-top: 0px;
   }
-  .call {
-    display: flex;
-  }
-  .arrow-down-icon {
-    right: 42%;
-    display: flex;
-    bottom: 20px;
-    position: absolute;
-  }
+  
 
   .arrow-up-icon {
     margin-left: 0px;
@@ -752,6 +762,26 @@
 }
 
 @media only screen and (max-width: 450px) {
+
+
+  #discounts{
+    padding-top: 30px;
+  }
+  .call {
+    display: flex;
+  }
+
+  .arrow-down-icon {
+    right: 42%;
+    display: flex;
+    bottom: 20px;
+    position: absolute;
+  }
+
+  .simple-marquee-container {
+    display: none;
+  }
+
   #new {
     padding-top: 0;
   }
@@ -923,7 +953,7 @@
     width: 100vw;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    background-color: var(--context-red);
+    background-color: var(--black-background);
   }
   .tag-order {
     margin-top: 0px;

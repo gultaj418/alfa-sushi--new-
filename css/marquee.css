@@ -57,9 +57,11 @@
     display: inline-block;
     line-height: 35px;
     color: #fff;
+    margin: 0 1em;
+    font-size: 28px;
+  }
+
+  .simple-marquee-container .marquee-content-items li:hover{
+    color: var(--context-red);
   }
   
-  .simple-marquee-container .marquee-content-items li:after {
-    content: "|";
-    margin: 0 1em;
-  }
