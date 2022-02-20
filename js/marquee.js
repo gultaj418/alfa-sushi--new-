@@ -299,13 +299,13 @@
     autostart: true,
     property: "value",
     onComplete: null,
-    duration: 20000,
+    duration: 30000,
     padding: 10,
     marquee_class: ".marquee",
     container_class: ".simple-marquee-container",
     sibling_class: 0,
     hover: true,
     velocity: 0,
-    direction: "right",
+    direction: "left",
   };
 })(jQuery, window, document);

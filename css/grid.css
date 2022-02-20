@@ -21,7 +21,8 @@
 }
 .list-cards {
   width: 90%;
-  padding: 0 5%;
+  padding: 0 4%;
+  gap: 0 1%;
   justify-content: space-between;
 }
 .cards {
@@ -35,6 +36,11 @@
 }
 .contact-content {
   display: flex;
+  margin: 0 0;
+}
+.day-open {
+  gap: 0 0rem;
+  justify-content: space-between;
 }
 .contact-map {
   transform: translateY(0);
@@ -73,8 +79,63 @@
   margin: 0 0;
 }
 
+@media screen and (max-width: 1330px) {
+  /* .list-cards {
+    justify-content: center;
+  } */
+}
+
+@media only screen and (max-width:1327px){
+  .list-cards{
+    justify-content: center ;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .contact-map {
     display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .list-cards {
+    padding: 0 0%;
+    width: 100%;
+    gap: 0;
+    justify-content: space-between;
+  }
+  .card-new {
+    justify-content: space-between;
+    margin: 0 0;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #c4c4c4b2;
+    border-top: 1px solid #c4c4c4b2;
+  }
+  .cards img {
+    margin-left: 0;
+  }
+  .card-content {
+    margin: 0 0;
+  }
+  .card-content h4,
+  .card-content p {
+    margin: 0 0;
+    margin-left: 21px;
+  }
+  .card-content p {
+    font-size: 15px;
+  }
+  .card-content h4 {
+    margin-bottom: 3px;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  .price {
+    margin-left: 21px;
+    margin-top: 25px;
+    display: inline-block;
+    font-size: 15px;
+    text-transform: uppercase;
   }
 }
