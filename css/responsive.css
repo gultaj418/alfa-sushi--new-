@@ -1,19 +1,12 @@
-
-
 @media only screen and (max-width: 1250px) {
   .second-header {
     justify-content: space-between;
   }
-  .second-header .logo {
-    margin-left: 6.5rem;
+
+  .line-menu {
+    width: 50%;
   }
-  .second-header .line-menu {
-    margin-left: 0;
-    margin-right: 5.5rem;
-  }
-  .line-menu ul li {
-    margin: 0 1.5rem;
-  }
+
   .branches.nav-version {
     display: none;
   }
@@ -70,6 +63,11 @@
 }
 
 @media only screen and (max-width: 950px) {
+  .gallery-first-line {
+    flex-direction: row;
+    overflow-x: auto;
+    justify-content: unset;
+  }
   .contact {
     flex-wrap: wrap;
   }
@@ -185,15 +183,6 @@
   }
 }
 
-@media only screen and (max-width: 810px) {
-  .second-header .logo {
-    margin-left: 3rem;
-  }
-  .second-header .line-menu {
-    margin-right: 3rem;
-  }
-}
-
 @media only screen and (max-width: 800px) {
   .signup-box {
     margin: 0 auto;
@@ -265,16 +254,13 @@
   .add-item {
     margin: 30px 110px;
   }
-  .second-header .line-menu ul li {
-    margin: 0 1.5rem;
-  }
 }
 
 @media only screen and (max-width: 650px) {
-  .main-list ul{
+  .main-list ul {
     display: none;
   }
-  .lang-arrow{
+  .lang-arrow {
     display: none;
   }
 
@@ -282,38 +268,39 @@
     visibility: visible;
     opacity: 1;
     transition: all 800ms ease;
-    margin-right: 1rem;
+    margin-right: 0rem;
     display: block;
-}
+  }
 
-.language-search-mobile.active {
+  .language-search-mobile.active {
     z-index: 9999;
     visibility: visible;
     opacity: 1;
-}
+  }
 
-.search-bar.mobile-active {
-  display: block;
-  position: absolute;
-  z-index: 100;
-  opacity: 1;
-  visibility: visible;
-  width: 70%;
-  /* left: 50%; */
-  top: 25%;
-}
+  .search-bar.mobile-active {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    opacity: 1;
+    visibility: visible;
+    width: 70%;
+    left: 5%;
+    top: 15%;
+  }
 
-  .search-bar{
+  .search-bar {
     display: none;
   }
   .second-header {
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .second-header .logo {
     margin: 0 0;
   }
   .second-header .line-menu {
     margin: 0 0;
+    width: fit-content;
   }
   .second-header .line-menu li:not(.bag-count) {
     display: none;
@@ -365,8 +352,6 @@
     margin-left: 0px !important;
     margin-right: 0 !important;
   }
-  
-
 
   .contact {
     flex-direction: column;
@@ -375,7 +360,6 @@
   .contact-content {
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 20px;
   }
 
   #lang,
@@ -392,7 +376,6 @@
     margin-left: 0px;
     margin-top: 0px;
   }
-  
 
   .arrow-up-icon {
     margin-left: 0px;
@@ -423,7 +406,6 @@
     margin-left: 0px;
     margin-right: 0;
   }
-  
 
   .menu-content ul {
     display: flex;
@@ -448,10 +430,10 @@
     flex-direction: column;
   }
 
-  .menu-cards{
+  .menu-cards {
     margin-left: 0;
   }
-  .card-menu{
+  .card-menu {
     margin-left: 0;
   }
   .menu-content ul li {
@@ -508,9 +490,10 @@
   }
   .contact-column-second,
   .contact-column-first {
-    width: 92%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0 0;
   }
+
   .day-open {
     display: flex;
     /* justify-content: space-between; */
@@ -762,9 +745,7 @@
 }
 
 @media only screen and (max-width: 450px) {
-
-
-  #discounts{
+  #discounts {
     padding-top: 30px;
   }
   .call {
@@ -842,7 +823,6 @@
 
   .product-img {
     width: 154px;
-    height: 115px !important;
     margin-top: 0px;
     margin-top: 0px;
     margin-left: 66px;
@@ -1056,10 +1036,9 @@
   }
 }
 
-
-@media only screen and (max-width:380px){
-  .order-total-box{
-    width:320px
+@media only screen and (max-width: 380px) {
+  .order-total-box {
+    width: 320px;
   }
 }
 
@@ -1133,12 +1112,12 @@
   .card-paragraph {
     width: calc(100vw - 140px);
   }
-  .order-total-box{
-    width:280px
+  .order-total-box {
+    width: 280px;
   }
   .order-total-box button {
     width: 260px;
-}
+  }
 }
 
 @media only screen and (max-width: 300px) {
@@ -1278,16 +1257,15 @@
     flex-direction: column;
     display: flex;
   }
-  .gallery-first-line {
-    flex-direction: row;
-    overflow-x: auto;
-    justify-content: unset;
-  }
+
   .gallery-info p {
     margin-left: 0px;
+    left: 10px;
+    position: absolute;
   }
   .gallery-second-line {
     flex-direction: column;
+    margin-top: 260px;
   }
   .gallery-second-line img {
     margin: 0 0;
@@ -1451,8 +1429,7 @@
   }
   .contact-column-second,
   .contact-column-first {
-    width: 92%;
-    margin: 0 auto;
+    width: 100%;
   }
   .day-open {
     display: flex;

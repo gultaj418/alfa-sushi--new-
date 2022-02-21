@@ -1,10 +1,14 @@
 .nav-header {
   width: 90%;
-  padding: 0 5%;
+  padding-right: 5%;
+  padding-left: 5%;
   justify-content: space-between;
 }
 .nav-header .logo {
   margin-left: 0rem;
+}
+.logo img {
+  margin-left: 0;
 }
 .first-line-menu {
   margin-right: 0rem;
@@ -33,6 +37,7 @@
   justify-content: space-between;
   padding: 0 5%;
   width: 90%;
+  margin-bottom: 100px;
 }
 .contact-content {
   display: flex;
@@ -56,7 +61,7 @@
   align-items: center;
 }
 .branches {
-  gap: 0 114px;
+  /* gap: 0 114px; */
 }
 .branch::after {
   right: -10px;
@@ -69,7 +74,7 @@
   font-size: 14px;
 }
 .footer .branch {
-  margin: 0 0;
+  margin: 0 1.25rem;
 }
 .branch h4 {
   margin: 0 0;
@@ -85,9 +90,9 @@
   } */
 }
 
-@media only screen and (max-width:1327px){
-  .list-cards{
-    justify-content: center ;
+@media only screen and (max-width: 1327px) {
+  .list-cards {
+    justify-content: center;
   }
 }
 
@@ -98,6 +103,12 @@
 }
 
 @media screen and (max-width: 450px) {
+  .cards {
+    margin: 0rem 0;
+    justify-content: space-between;
+    border: none;
+  }
+
   .list-cards {
     padding: 0 0%;
     width: 100%;
@@ -109,15 +120,19 @@
     margin: 0 0;
     width: 100%;
     border: 0;
-    border-bottom: 1px solid #c4c4c4b2;
-    border-top: 1px solid #c4c4c4b2;
   }
   .cards img {
     margin-left: 0;
   }
   .card-content {
     margin: 0 0;
+    flex: 1;
+    border-top: 1px solid #c4c4c4b2;
   }
+  .card-content:nth-of-type(4) {
+    border-bottom: 1px solid #c4c4c4b2;
+  }
+
   .card-content h4,
   .card-content p {
     margin: 0 0;
@@ -137,5 +152,32 @@
     display: inline-block;
     font-size: 15px;
     text-transform: uppercase;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  /* .day-open {
+    justify-content: flex-start;
+    gap: 0 6rem;
+  } */
+  .main-list {
+    display: none;
+  }
+  .contact-column-second h4:last-of-type {
+    margin-top: 19px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .contact-map img {
+    width: 100% !important;
+    height: 100%;
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .second-footer {
+    display: flex;
+    justify-content: center;
   }
 }
