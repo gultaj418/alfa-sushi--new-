@@ -466,6 +466,9 @@
     align-items: center;
     justify-content: center;
   }
+  .second-footer {
+    justify-content: space-between;
+  }
   .footer .logo img {
     margin-left: 0px;
   }

@@ -39,6 +39,10 @@
 }
 .mobile-heavy .hamburger-heavy .line:first-child {
   transform: rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
+  -ms-transform: rotateZ(45deg);
+  -o-transform: rotateZ(45deg);
 }
 .mobile-heavy .hamburger-heavy .line:last-child {
   transform: rotateZ(-45deg);
