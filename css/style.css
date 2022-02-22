@@ -342,12 +342,13 @@ li {
 }
 .search-input.active {
   transition: all 100ms ease;
-  /* ? paddingimiz orijinal yerde sagdan ve soldan
-    ? 2rem oldugu ucun 100faizden cixmaliyiq
-  */
-
+  /*?paddingimizorijinalyerdesagdanvesoldan?2remolduguucun100faizdencixmaliyiq*/
   width: calc(100% - 2rem);
   visibility: visible;
+  -webkit-transition: all 100ms ease;
+  -moz-transition: all 100ms ease;
+  -ms-transition: all 100ms ease;
+  -o-transition: all 100ms ease;
 }
 .search-input input {
   flex: 1;
@@ -926,6 +927,8 @@ footer {
 
 .footer {
   display: flex;
+  width: 90%;
+  padding: 1.5% 5%;
   justify-content: space-between;
 }
 
@@ -954,7 +957,7 @@ footer {
   background-color: var(--context-red);
   position: absolute;
   bottom: 0px;
-  right: -2px;
+  right: -10px;
   border-radius: 17px;
 }
 .branch-adjami {

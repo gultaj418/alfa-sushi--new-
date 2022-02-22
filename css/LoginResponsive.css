@@ -1,0 +1,156 @@
+@media only screen and (max-width:1250px){
+    .signup-box {
+        margin-left: 250px;
+      }
+}
+@media only screen and (max-width: 1100px) {
+    .signup-box {
+      margin-left: 180px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .continue-version {
+        margin-left: 150px;
+      }
+      .signup-box {
+        margin-left: 150px;
+        width: 500px;
+      }
+    
+      .input-box {
+        margin-left: 40px;
+      }
+    
+      .input-box input {
+        width: 270px;
+      }
+}
+
+@media only screen and (max-width: 800px) {
+    .signup-box {
+      margin: 0 auto;
+      /* width: 400px !important; */
+      margin-bottom: 50px;
+    }
+  
+    .input-box input {
+      width: 270px;
+    }
+  
+    .continue-version {
+      margin: 30px auto;
+    }
+   
+  }
+
+  @media only screen and (max-width:550px){
+
+    .signup-box {
+        width: 400px;
+      }
+    
+      .label-box label {
+        font-size: 15px;
+      }
+    
+      .input-box {
+        margin-left: 20px;
+      }
+      .input-box input {
+        width: 220px;
+      }
+      .login-done {
+        width: 430px;
+      }
+    .continue-version {
+        margin-left: 0px;
+        font-size: 14px;
+      }
+      .continue-version li {
+        margin-right: 30px;
+        margin-left: 0px;
+      }
+  }
+
+  @media only screen and (max-width:470px){
+    .signup-box {
+        width: 300px;
+      }
+      .label-box label {
+        font-size: 12px;
+      }
+    
+      .label-box {
+        font-size: 12px;
+      }
+      .input-box {
+        margin-left: 20px;
+      }
+      .input-box input {
+        width: 150px;
+      }
+      .login-done {
+        width: 430px;
+      }
+      .continue-version {
+        margin-left: 0px;
+        font-size: 12px;
+      }
+      .continue-version li {
+        margin-right: 10px;
+        margin-left: 0px;
+      }
+  }
+
+  @media only screen and (max-width:400px){
+    .signup-box {
+        width: 270px;
+      }
+      .label-box label {
+        font-size: 10px;
+      }
+    
+      .label-box {
+        margin-left: -15px;
+        font-size: 10px;
+      }
+      .input-box {
+        margin-left: 20px;
+      }
+      .input-box input {
+        width: 150px;
+      }
+      .login-done {
+        width: 430px;
+      }
+      .continue-version {
+        margin-left: 0px;
+        font-size: 14px;
+      }
+      .continue-version li {
+        margin-right: 3px;
+        margin-left: 0px;
+        font-size: 8px;
+      }
+      .login-done {
+        width: 220px;
+      }
+  }
+
+  @media only screen and (max-width: 350px) {
+    .signup-box {
+      width: 250px;
+      /* margin-left: 0px; */
+      margin: 0 auto;
+    }
+    .input-box input {
+      width: 100px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .signup-box {
+      width: 220px;
+    }
+}
