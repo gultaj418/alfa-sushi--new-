@@ -21,10 +21,11 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden !important;
   font-family: "Helvetica", sans-serif;
   /* overflow-x: hidden; */
 }
-li{
+li {
   list-style-type: none;
 }
 
@@ -81,7 +82,6 @@ li{
 
 /* -------------------------------------------------------hamburger menu css-------------------------------------------------------- */
 
-
 .hamburger-menu {
   display: none;
   z-index: 9;
@@ -115,18 +115,29 @@ li{
 
 .mobile-heavy {
   position: absolute;
+  right: 0;
   top: 0;
+  overflow-x: hidden;
   visibility: hidden;
-  /* opacity: 0; */
+  /*opacity: 0;
+  */
   opacity: 1;
-  /* margin-left: 400%; */
-  transform: translateX(-100%);
+  /*margin-left: 400%;
+  */
+  transform: translateX(100%);
   z-index: 10;
-
   height: 100vh;
   width: 0%;
   transition: 800ms all ease;
   background-color: var(--black-background);
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  -webkit-transition: 800ms all ease;
+  -moz-transition: 800ms all ease;
+  -ms-transition: 800ms all ease;
+  -o-transition: 800ms all ease;
 }
 
 .mobile-heavy .hamburger-heavy {
@@ -140,7 +151,6 @@ li{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 .mobile-heavy .hamburger-heavy.btn-active {
   visibility: visible;
@@ -150,26 +160,23 @@ li{
 
 .mobile-heavy.heavy-background {
   transform: translateX(0%);
-  width: 100%;
+
+  width: 90%;
+  padding: 0 5%;
   opacity: 1;
   visibility: visible;
 }
 
 .black-menu {
- 
   position: relative;
-    /* top: 30%; */
-    /* right: 30px; */
-    width: 90%;
-    padding: 0 5%;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 400ms ease;
-    margin-right: 0rem;
-    z-index: 11;
-    display: none;
-
-  
+  /* top: 30%; */
+  /* right: 30px; */
+  visibility: hidden;
+  opacity: 0;
+  transition: all 400ms ease;
+  margin-right: 0rem;
+  z-index: 11;
+  display: none;
 }
 .black-menu ul li {
   list-style-type: none;
@@ -189,12 +196,12 @@ li{
   visibility: visible;
   opacity: 1;
   transition: all 800ms ease;
-  margin-right: 1rem;
+  margin-right: 0;
   transition-delay: 0.25s;
 }
 
 /*---------------------------------------mobile lang css---------------------------------*/
-#mobLang{
+#mobLang {
   text-transform: uppercase;
 }
 .rightArrowSearch.deactive {
@@ -211,16 +218,14 @@ li{
   display: inline;
 }
 
-.search-text{
+.search-text {
   color: var(--text-white);
 }
 
 .language-search-mobile {
   z-index: -9999;
   position: relative;
-  padding: 0 5%;
   display: flex;
-  width: 90%;
   visibility: hidden;
   opacity: 0;
   transition: all 400ms ease;
@@ -249,13 +254,12 @@ li{
   transform: rotate(180deg);
 }
 
-.svg-class-mobile{
+.svg-class-mobile {
   margin-top: 6px;
 }
-.lang-and-icon{
+.lang-and-icon {
   display: flex;
   gap: 0.5rem;
-
 }
 
 /* ------------------------------------------------------Desktop nav css----------------------------------------------------------------- */
@@ -306,8 +310,14 @@ li{
   opacity: 1;
   width: 52%;
 }
+.search-bar.active ~ .line-menu {
+  width: fit-content;
+}
+.search-bar.active ~ .line-menu ul li {
+  margin: 0 20px;
+}
 .search-bar.active ~ .first-line-menu ul li {
-  margin-left: 20px;
+  margin: 0 20px;
 }
 
 .search-bar span.search {
@@ -321,18 +331,24 @@ li{
 
 .search-bar .search-input {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 0px;
   height: 43px;
+  padding: 0 1rem;
   border: 3px solid var(--context-red);
   background-color: var(--text-white);
   border-radius: 150px;
 }
 .search-input.active {
   transition: all 100ms ease;
-  width: 100%;
+  /*?paddingimizorijinalyerdesagdanvesoldan?2remolduguucun100faizdencixmaliyiq*/
+  width: calc(100% - 2rem);
   visibility: visible;
+  -webkit-transition: all 100ms ease;
+  -moz-transition: all 100ms ease;
+  -ms-transition: all 100ms ease;
+  -o-transition: all 100ms ease;
 }
 .search-input input {
   flex: 1;
@@ -342,10 +358,9 @@ button {
   border: 0;
   outline: none;
   background: none;
-  padding: 0 1.7rem;
 }
 
-#arrow-lang{
+#arrow-lang {
   transition: all 400ms ease;
 }
 
@@ -377,12 +392,11 @@ button {
   text-transform: uppercase;
   cursor: pointer;
   color: var(--light-grey);
-  margin: 3px 0;
+  padding: 3px 0;
 }
-.language :hover{
+.language :hover {
   color: var(--context-red);
 }
-
 
 .language.active {
   color: var(--context-red);
@@ -407,7 +421,6 @@ button {
 }
 
 li#search.deactive {
-
   display: none;
 }
 
@@ -421,19 +434,18 @@ li#search.deactive {
   justify-content: end;
 }
 
-.lang-arrow{
+.lang-arrow {
   margin-left: 10px;
 }
 
 #lang.active {
   background-color: var(--black-background);
 }
-.svg-class{
+.svg-class {
   margin-left: 10px;
 }
 
 .svg-class.active {
- 
   transform: rotate(180deg);
 }
 
@@ -441,14 +453,14 @@ li#search.deactive {
   transition: all 400ms ease;
 }
 
-#lang:hover+svg path{
+#lang:hover + svg path {
   stroke: var(--context-red);
 }
 
 /* -----------------------Desktop headers css (first section)--------------------------- */
-
-
-
+header {
+  overflow-x: hidden;
+}
 .main-list {
   /* position: relative; */
   position: absolute;
@@ -470,6 +482,7 @@ li#search.deactive {
   display: inline-block;
   transition: margin-bottom 400ms ease;
   color: var(--text-white);
+  font-size: 24px;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -515,9 +528,6 @@ li#search.deactive {
   color: var(--context-red);
   cursor: pointer;
 }
-
-
-
 
 /* --------------------------------------------------------------------------------------------- */
 
@@ -594,7 +604,6 @@ li#search.deactive {
 }
 
 /*----------------------- owl-css---------------- */
-
 
 .owl-dots {
   width: 100%;
@@ -673,7 +682,6 @@ li#search.deactive {
 .tag-new h4 {
   margin-left: 100px;
 }
-
 
 /*-------------------------Card recommend and new (index css)-----------------------*/
 .list-cards {
@@ -793,8 +801,6 @@ p {
 .product-img {
   width: 100%;
 }
-
-
 
 /*------------------------------Contact (Get in touch section starts)---------------------------- */
 
@@ -921,6 +927,8 @@ footer {
 
 .footer {
   display: flex;
+  width: 90%;
+  padding: 1.5% 5%;
   justify-content: space-between;
 }
 
@@ -949,7 +957,7 @@ footer {
   background-color: var(--context-red);
   position: absolute;
   bottom: 0px;
-  right: -2px;
+  right: -10px;
   border-radius: 17px;
 }
 .branch-adjami {
@@ -975,6 +983,9 @@ footer {
   justify-content: center;
   align-items: center;
 }
+.branches.nav-version.active {
+  display: none;
+}
 
 .line-menu {
   width: 100%;
@@ -984,8 +995,7 @@ footer {
 
 .line-menu ul li {
   list-style-type: none;
-  margin-left: 40px;
-  margin-right: 20px;
+
   cursor: pointer;
 }
 
@@ -1018,9 +1028,6 @@ footer {
   color: var(--context-red);
   margin-left: 10%;
 }
-
-
-
 
 /*------------login/sign and profile/adress continue version css------*/
 

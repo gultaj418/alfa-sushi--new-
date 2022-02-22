@@ -1,3 +1,67 @@
+.nav-header {
+  width: 90%;
+  margin-top: 0;
+
+  padding-top: 2%;
+}
+.nav-header .logo {
+  margin-left: 0rem;
+  margin-right: 10px;
+}
+.logo a {
+  display: inline-block;
+}
+
+.first-line-menu {
+  margin-right: 0;
+}
+.first-line-menu ul {
+  margin: 0;
+}
+
+.nav-version {
+  justify-content: space-between;
+}
+.nav-version .branch {
+  margin: 0 5rem;
+}
+.nav-version .branch:first-of-type {
+  margin-left: 0;
+}
+.nav-version .branch:last-of-type {
+  margin-right: 0;
+}
+.branch:after {
+  height: 40px;
+  right: -10px;
+}
+.branch h4 {
+  margin: 0;
+  font-size: 18px;
+}
+.branch span {
+  display: block;
+  text-align: right;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.first-line-menu ul li {
+  margin: 0 3rem;
+}
+.first-line-menu ul li:first-of-type {
+  margin-left: 0;
+}
+.first-line-menu ul li:last-of-type {
+  margin-right: 0;
+}
+.list-about {
+  padding: 0 5%;
+  width: 90%;
+  margin-right: 0;
+}
+
 .about-header {
   background-image: url("../assets/images/about.jpg");
 }
@@ -11,12 +75,12 @@
 
 .chefs {
   padding-top: 70px;
-  margin-top: 800px;
+  margin-top: 850px;
 }
 
 .container-about {
-  width: 1000px;
-  margin: 0 auto;
+  width: 90%;
+  padding: 0 5%;
 }
 
 .chef-img {
@@ -43,6 +107,9 @@
 
 .chef-content {
   width: 480px;
+  font-size: 17px;
+  line-height: 26px;
+  font-weight: 400;
 }
 
 .left {
@@ -62,8 +129,11 @@
 .gallery-first-line {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-top: 200px;
+}
+.cont-img-1 {
+  display: flex;
 }
 
 .img-1 {
@@ -82,25 +152,32 @@
 .gallery-info {
   width: 330px;
 }
+.gallery-info p {
+  margin-left: 30px;
+  line-height: 26px;
+  font-size: 17px;
+}
 
 .gallery-heading h1 {
   font-size: 100px;
   color: var(--faded-red);
   position: absolute;
-  top: 30%;
-  right: 20%;
+  top: 28%;
+  right: 10%;
   z-index: -9;
 }
 
 .gallery-second-line {
+  width: 90%;
   margin-top: 80px;
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
+  padding: 0 5%;
 }
 
 .img-3 {
   margin-top: 300px;
-  margin-left: 150px;
 }
 
 .img-4 {
@@ -109,7 +186,25 @@
 }
 
 .img-gallery-content {
-  margin-left: 260px;
+  /* margin-left: 260px; */
   margin-top: 40px;
   text-align: end;
+}
+.img-gallery-content p {
+  width: 70%;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+@media only screen and (max-width: 900px) {
+  .gallery-second-line {
+    flex-direction: column-reverse;
+    justify-content: safe;
+  }
+  .img-3 {
+    margin-top: 0;
+  }
+  .gallery-heading h1 {
+    top: 35%;
+  }
 }

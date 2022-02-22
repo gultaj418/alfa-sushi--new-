@@ -1,32 +1,36 @@
 .second-header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 0.7rem 0;
-  width: 100%;
+  padding: 2% 5%;
+  width: 90%;
 }
 
-.second-header .logo {
-  /* margin: 0 6.5rem; */
-  margin-right: 6.5rem;
-  margin-left: 1rem;
-}
 .line-menu {
-  width: fit-content;
+  width: 33.3%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 7rem;
 }
+.branches {
+  width: 33.3%;
+}
+
+.nav-version {
+  justify-content: space-between;
+}
+
 .line-menu ul {
   margin-top: 0;
   padding-bottom: 0;
   padding: 0;
   margin-bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   /* margin-left: 0; */
 }
 .line-menu ul li {
-  margin: 0 3rem;
   text-transform: uppercase;
 }
 
@@ -38,7 +42,7 @@
 
 .branch {
   position: relative;
-  padding-right: 10px;
+  margin: 0 0;
 }
 .branch span {
   font-size: 14px;
