@@ -1,0 +1,44 @@
+@media only screen and (max-width:650px){
+    .menu {
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .menu-cards{
+        margin-left: 0;
+      }
+      .card-menu{
+        margin-left: 0;
+      }
+      .menu-content ul li {
+        /* margin-right: 10px; */
+        line-height: 20px;
+        flex-shrink: 0;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: auto;
+      }
+      .menu-content {
+        margin-left: 0;
+      }
+      .menu-content ul {
+        display: flex;
+        /* flex-direction: row; */
+        /* justify-content: space-around; */
+        /* width: 130%; */
+        /* background-color: red; */
+        align-items: center;
+        margin-left: 20px;
+        margin-right: 10px;
+        margin-left: 0;
+        margin-bottom: 40px;
+        padding-left: 0;
+        overflow: scroll;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      .menu-content.order-bar ul {
+        margin-bottom: 20px;
+      }
+}

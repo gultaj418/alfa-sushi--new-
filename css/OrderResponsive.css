@@ -1,0 +1,121 @@
+@media only screen and (max-width: 870px) {
+    .container-row {
+        flex-direction: column;
+      }
+    .order-box {
+        margin: 20px auto;
+      }
+
+      #add-comment {
+        margin: 0 auto;
+      }
+    
+      .add-item,
+      .recommendation-heading {
+        margin: 30px 180px;
+      }
+    
+      .order-total-column {
+        display: flex;
+        justify-content: center;
+        margin-left: -120px;
+      }
+
+}
+
+@media only screen and (max-width:650px){
+    .container {
+        width: auto;
+      }
+}
+
+@media only screen and (max-width:450px){
+    .product-img.order-img {
+        margin-left: 0px;
+        width: 140px;
+      }
+    .recommend-order-img {
+      margin-left: 0px;
+      width: 140px;
+    }
+    .order-box img {
+        margin-top: 0px;
+      }
+      .order-box-mini img {
+        width: 140px;
+      }
+    
+      .order-box-mini {
+        width: 100%;
+      }
+      .order-box-content {
+        margin: 0 auto;
+      }
+    
+      .order-box-content p {
+        /* margin-left: 20px; */
+        margin-left: -1px;
+      }
+    .order-bar {
+        display: none;
+      }
+      .cards-order {
+        width: 100%;
+        border-radius: 0px;
+        /* height: 130px; */
+        display: flex;
+        margin-top: 30px;
+        border: 1px solid #c4c4c4b2;
+        padding-bottom: 0px;
+        margin: 0 auto;
+      }
+    
+      .cards-order img {
+        width: 170px;
+        height: 100% !important;
+      }
+    
+      .cards-order .price-tag {
+        margin-top: -1px;
+      }
+      .order-box.cards-order {
+        border: none;
+        border-bottom: 1px solid var(--light-grey) !important;
+      }
+
+      .order-total-column {
+        margin-left: 0px;
+        justify-content: flex-start;
+      }
+}
+
+@media only screen and (max-width:380px){
+    .order-total-box{
+      width:320px
+    }
+  }
+
+  @media only screen and (max-width:350px){
+    
+    .recommend-order-img {
+      width: 120px !important;
+      margin-left: 20px;
+    }
+  }
+
+  @media only screen and (max-width:335px){
+    .order-total-box{
+        width:280px
+      }
+      .order-total-box button {
+        width: 260px;
+    }
+  }
+
+  @media only screen and (max-width:300px){
+  
+    .recommend-order-img {
+      width: 100px !important;
+      margin-left: 0px;
+    }
+  }
