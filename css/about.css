@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url(../assets/fonts/Helvetica-Neue-Font/Helvetica-Neue-UltraLight/Helvetica\ Neue\ UltraLight.ttf);
+}
 .nav-header {
   width: 90%;
   margin-top: 0;
@@ -75,7 +79,7 @@
 
 .chefs {
   padding-top: 70px;
-  margin-top: 850px;
+  margin-top: 700px;
 }
 
 .container-about {
@@ -97,7 +101,30 @@
 .chef-left-card {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  margin-bottom: 100px;
+  gap: 0 15px;
+  justify-content: center;
+  /* align-items: baseline; */
+}
+.chef-left-card span {
+  width: 100%;
+  text-align: right;
+
+  margin-bottom: 7px;
+  font-family: "HelveticaNeue", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 22.25px;
+}
+.chef-left-card:nth-child(2n) {
+  gap: 0 65px;
+}
+
+.chef-left-card:nth-child(2n) span {
+  margin-left: 7px;
+  width: calc(100% - 7px);
+  text-align: left;
 }
 
 .chef-right-card {
@@ -109,11 +136,11 @@
   width: 480px;
   font-size: 17px;
   line-height: 26px;
+  font-family: "Helvetica", sans-serif;
+  /* display: flex; */
+  margin-top: 30px;
+  /* align-items: stretch; */
   font-weight: 400;
-}
-
-.left {
-  margin-left: 100px;
 }
 
 .chef-name {
@@ -129,7 +156,7 @@
 .gallery-first-line {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-top: 200px;
 }
 .cont-img-1 {
@@ -149,11 +176,12 @@
   margin-top: -80px;
 }
 
-.gallery-info {
-  width: 330px;
-}
 .gallery-info p {
   margin-left: 30px;
+  width: 370px;
+  margin-right: 26px;
+  font-weight: 400;
+  font-family: "Helvetica", sans-serif;
   line-height: 26px;
   font-size: 17px;
 }
