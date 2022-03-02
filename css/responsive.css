@@ -236,8 +236,8 @@
     opacity: 1;
     visibility: visible;
     width: 70%;
-    left: 5%;
-    top: 15%;
+    left: 13%;
+    top: 10%;
   }
 
   .search-bar {
@@ -905,7 +905,7 @@
   .card-paragraph {
     width: calc(100vw - 140px);
   }
-
+}
 
 @media only screen and (max-width: 300px) {
    .product-img {
@@ -1060,8 +1060,6 @@
     display: none;
   }
 }
-
-
 
 @media only screen and (max-width: 450px) {
   .order-bar {

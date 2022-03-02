@@ -53,10 +53,13 @@ searchMobile.addEventListener("click", (e) => {
   rightArrowSearch.classList.add("deactive");
   searchCloseMobile.classList.add("active");
   searchInput.classList.add("active");
-
+  // mobLangSection.style.display="none";
   blackMobileMenu.classList.remove("btn-active");
   mobileLanguage.classList.remove("active");
+ 
 });
+
+
 
 //Language changer
 
@@ -116,6 +119,7 @@ search.addEventListener("click", () => {
   searchBar.classList.add("active");
   searchInput.classList.add("active");
   console.log(searchBar);
+
 });
 searchBar.addEventListener(
   "focusout",
@@ -127,9 +131,26 @@ searchBar.addEventListener(
     searchInput.classList.remove("active");
     blackMobileMenu.classList.add("btn-active");
     mobileLanguage.classList.add("active");
+    // mobLangSection.style.display="flex";
   },
   false
 );
+
+searchCloseMobile.addEventListener("click",()=>{
+  searchBar.classList.remove("mobile-active");
+  search.classList.remove("deactive");
+  searchBar.classList.remove("active");
+  searchInput.classList.remove("active");
+  blackMobileMenu.classList.add("btn-active");
+  mobileLanguage.classList.add("active");
+
+  if(mobLangSection.classList.contains("active")){
+    mobLangSection.classList.remove("active");
+
+  }
+  // mobLangSection.style.display="flex";
+
+})
 
 //------------------------------------------------------------------------
 

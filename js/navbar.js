@@ -1,5 +1,6 @@
 const search = document.querySelector("#search");
 const searchMobile = document.querySelector(".search-text");
+const searchCloseMobile= document.querySelector(".searchCloseMobile")
 const searchBar = document.querySelector(".search-bar");
 const plusOrder = document.querySelectorAll(".plus");
 const minusOrder = document.querySelectorAll(".minus");
@@ -49,10 +50,19 @@ hamburgerHeavy.addEventListener("click", () => {
 searchMobile.addEventListener("click", (e) => {
   searchBar.classList.add("mobile-active");
   searchInput.classList.add("active");
+  languages.style.display="none";
+  
+
 
   blackMobileMenu.classList.remove("btn-active");
   mobileLanguage.classList.remove("active");
+  console.log ("myau");
 });
+
+
+searchCloseMobile.addEventListener("click",()=>{
+  searchInput.classList.remove("active");
+})
 
 //Language changer
 
@@ -113,6 +123,7 @@ search.addEventListener("click", () => {
   searchInput.classList.add("active");
   navVersionBranch.classList.add("active");
   console.log(searchBar);
+  console.log("myau 2");
 });
 searchBar.addEventListener(
   "focusout",
