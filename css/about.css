@@ -79,7 +79,7 @@
 
 .chefs {
   padding-top: 70px;
-  margin-top: 700px;
+  margin-top: 100vh;
 }
 
 .container-about {
@@ -111,9 +111,9 @@
   text-align: right;
 
   margin-bottom: 7px;
-  font-family: "HelveticaNeue", sans-serif;
+  font-family: "Helvetica", sans-serif;
   font-weight: 100;
-  font-style: normal;
+  font-style: italic;
   font-size: 20px;
   line-height: 22.25px;
 }
@@ -215,13 +215,13 @@
 
 .img-gallery-content {
   /* margin-left: 260px; */
+  width: 400px;
   margin-top: 40px;
   text-align: end;
 }
 .img-gallery-content p {
-  width: 70%;
-  margin-left: auto;
-  margin-right: 0;
+  text-align: start;
+  margin: 0;
 }
 
 @media only screen and (max-width: 900px) {
