@@ -59,55 +59,55 @@ searchMobile.addEventListener("click", (e) => {
 
 //Language changer
 
-langChanger.addEventListener("click", () => {
-  langSection.classList.toggle("active");
-  svgRotator.classList.toggle("active");
-  langChanger.classList.toggle("active");
-  langSection.addEventListener("click", (e) => {
-    let lang = langSection.querySelector(".language.active");
-    if (lang !== null) {
-      lang.classList.remove("active");
-    }
-    e.target.classList.add("active");
-    langChanger.textContent = e.target.textContent;
-  });
-});
+// langChanger.addEventListener("click", () => {
+//   langSection.classList.toggle("active");
+//   svgRotator.classList.toggle("active");
+//   langChanger.classList.toggle("active");
+//   langSection.addEventListener("click", (e) => {
+//     let lang = langSection.querySelector(".language.active");
+//     if (lang !== null) {
+//       lang.classList.remove("active");
+//     }
+//     e.target.classList.add("active");
+//     langChanger.textContent = e.target.textContent;
+//   });
+// });
 
-mobLangChanger.addEventListener("click", () => {
-  mobLangSection.classList.toggle("active");
-  svgMobileRotator.classList.toggle("active");
-  mobLangSection.addEventListener("click", (e) => {
-    let lang = mobLangSection.querySelector(".language.active");
-    if (lang !== null) {
-      lang.classList.remove("active");
-    }
-    e.target.classList.add("active");
-    // console.log(e.target);
-    // e.target.classList.add("aze");
-    mobLangChanger.textContent = e.target.textContent;
-    // console.log(e.target.textContent);
-    // console.log(e.target.textContent);
-    // if (e.target.textContent !== "A") {
-    //   svgMobileRotator.classList.add("aze");
-    //   svgMobileRotator.classList.remove("rus");
-    //   svgMobileRotator.classList.remove("eng");
+// mobLangChanger.addEventListener("click", () => {
+//   mobLangSection.classList.toggle("active");
+//   svgMobileRotator.classList.toggle("active");
+//   mobLangSection.addEventListener("click", (e) => {
+//     let lang = mobLangSection.querySelector(".language.active");
+//     if (lang !== null) {
+//       lang.classList.remove("active");
+//     }
+//     e.target.classList.add("active");
+//     // console.log(e.target);
+//     // e.target.classList.add("aze");
+//     mobLangChanger.textContent = e.target.textContent;
+//     // console.log(e.target.textContent);
+//     // console.log(e.target.textContent);
+//     // if (e.target.textContent !== "A") {
+//     //   svgMobileRotator.classList.add("aze");
+//     //   svgMobileRotator.classList.remove("rus");
+//     //   svgMobileRotator.classList.remove("eng");
 
-    //   console.log(1);
-    // } else if (e.target.textContent === "RUSSIAN") {
-    //   svgMobileRotator.classList.add("rus");
-    //   svgMobileRotator.classList.remove("aze");
-    //   svgMobileRotator.classList.remove("eng");
-    //   console.log(2);
-    // } else {
-    //   svgMobileRotator.classList.add("eng");
-    //   svgMobileRotator.classList.remove("aze");
-    //   svgMobileRotator.classList.remove("rus");
-    //   console.log(3);
-    // }
-  });
-});
+//     //   console.log(1);
+//     // } else if (e.target.textContent === "RUSSIAN") {
+//     //   svgMobileRotator.classList.add("rus");
+//     //   svgMobileRotator.classList.remove("aze");
+//     //   svgMobileRotator.classList.remove("eng");
+//     //   console.log(2);
+//     // } else {
+//     //   svgMobileRotator.classList.add("eng");
+//     //   svgMobileRotator.classList.remove("aze");
+//     //   svgMobileRotator.classList.remove("rus");
+//     //   console.log(3);
+//     // }
+//   });
+// });
 
-//EventListeners
+//SEARCH EventListeners
 
 search.addEventListener("click", () => {
   let searchInput = searchBar.querySelector(".search-input");

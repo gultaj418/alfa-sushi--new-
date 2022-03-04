@@ -17,6 +17,10 @@
 
 /* @import url(../assets/fonts/helveticaa/HelveticaNeue-BlackCond.ttf); */
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -727,7 +731,9 @@ p {
 
 .card-content p {
   color: var(--light-grey);
-  margin-bottom: 20px;
+  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
 }
 
 .price {
