@@ -76,6 +76,7 @@
 /* -----------------------Menu-line for menu and order pages-------------------------- */
 .menu-content {
   margin-left: 10%;
+  margin-right: 9%;
 }
 .menu-content ul li {
   list-style-type: none;
