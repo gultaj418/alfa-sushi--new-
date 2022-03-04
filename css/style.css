@@ -798,13 +798,14 @@ p {
   /* margin-right: 15px; */
   cursor: pointer;
 }
+
 .add-order.active {
   width: 200px;
   opacity: 1;
   visibility: visible;
   transition: all 400ms ease;
 }
-.add-order.active span:first-child {
+.add-order.active span.add-to-order:first-child {
   font-weight: 700;
 }
 

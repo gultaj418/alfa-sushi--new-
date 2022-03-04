@@ -168,7 +168,7 @@ plusOrder.forEach(function (el) {
     minusOrder.classList.add("active");
     countSpan.innerHTML = parseInt(countSpan.innerHTML) + 1;
     addOrder.innerHTML = `
-      <span>Add to order</span> 
+      <span class="add-to-order">Add to order</span> 
       <span class="add-order-price-container"> 
         <span class="add-order-currency">AZN</span>
         <span class="add-order-price">${countSpan.textContent * 20}</span>
