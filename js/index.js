@@ -19,6 +19,7 @@ const downIcon = document.querySelector(".arrow-down-icon");
 const upIcon = document.querySelector(".arrow-up-icon");
 const x = window.matchMedia("(max-width: 768px)");
 let searchInput = document.querySelector(".search-input");
+let input = searchInput.querySelector("input");
 let hamburgerHeavy = document.querySelector(".hamburger-heavy");
 const mobileLanguage = document.querySelector(".language-search-mobile");
 // const blackMobileMenu = document.querySelector(".black-menu");
@@ -55,59 +56,35 @@ searchMobile.addEventListener("click", (e) => {
   // mobLangSection.style.display="none";
   blackMobileMenu.classList.remove("btn-active");
   mobileLanguage.classList.remove("active");
+  input.focus();
 });
-
-//Language changer
-
-// langChanger.addEventListener("click", () => {
-//   langSection.classList.toggle("active");
-//   svgRotator.classList.toggle("active");
-//   langChanger.classList.toggle("active");
-//   langSection.addEventListener("click", (e) => {
-//     let lang = langSection.querySelector(".language.active");
-//     if (lang !== null) {
-//       lang.classList.remove("active");
-//     }
-//     e.target.classList.add("active");
-//     langChanger.textContent = e.target.textContent;
-//   });
-// });
-
-// mobLangChanger.addEventListener("click", () => {
-//   mobLangSection.classList.toggle("active");
-//   svgMobileRotator.classList.toggle("active");
-//   mobLangSection.addEventListener("click", (e) => {
-//     let lang = mobLangSection.querySelector(".language.active");
-//     if (lang !== null) {
-//       lang.classList.remove("active");
-//     }
-//     e.target.classList.add("active");
-//     // console.log(e.target);
-//     // e.target.classList.add("aze");
-//     mobLangChanger.textContent = e.target.textContent;
-//     // console.log(e.target.textContent);
-//     // console.log(e.target.textContent);
-//     // if (e.target.textContent !== "A") {
-//     //   svgMobileRotator.classList.add("aze");
-//     //   svgMobileRotator.classList.remove("rus");
-//     //   svgMobileRotator.classList.remove("eng");
-
-//     //   console.log(1);
-//     // } else if (e.target.textContent === "RUSSIAN") {
-//     //   svgMobileRotator.classList.add("rus");
-//     //   svgMobileRotator.classList.remove("aze");
-//     //   svgMobileRotator.classList.remove("eng");
-//     //   console.log(2);
-//     // } else {
-//     //   svgMobileRotator.classList.add("eng");
-//     //   svgMobileRotator.classList.remove("aze");
-//     //   svgMobileRotator.classList.remove("rus");
-//     //   console.log(3);
-//     // }
-//   });
-// });
+searchCloseMobile.addEventListener(
+  "click",
+  () => {
+    input.value = "";
+    input.focus();
+  },
+  true
+);
+console.log(searchCloseMobile);
 
 //SEARCH EventListeners
+
+input.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    if (searchBar.className.includes("mobile-active")) {
+      console.log("object");
+    }
+    let searchInput = searchBar.querySelector(".search-input");
+    searchBar.classList.remove("mobile-active");
+    search.classList.remove("deactive");
+    searchBar.classList.remove("active");
+    searchInput.classList.remove("active");
+    blackMobileMenu.classList.add("btn-active");
+    mobileLanguage.classList.add("active");
+    // mobLangSection.style.display="flex";
+  }
+});
 
 search.addEventListener("click", () => {
   let searchInput = searchBar.querySelector(".search-input");
@@ -116,9 +93,29 @@ search.addEventListener("click", () => {
   searchInput.classList.add("active");
   console.log(searchBar);
 });
-searchBar.addEventListener(
-  "focusout",
+
+// document.body.onclick = () => {
+//   if (searchBar.className.includes("active")) {
+//     searchBar.classList.remove("active");
+//   }
+// };
+document.body.addEventListener("click", (e) => {
+  if (
+    !e.composedPath().includes(searchBar) &&
+    !e.composedPath().includes(search)
+  ) {
+    searchBar.classList.remove("active");
+    search.classList.remove("deactive");
+    searchInput.classList.remove("active");
+  }
+});
+mobileHeavy.addEventListener(
+  "click",
   () => {
+    console.log("mobileHeavy triggered");
+    if (searchBar.className.includes("mobile-active")) {
+      console.log("object");
+    }
     let searchInput = searchBar.querySelector(".search-input");
     searchBar.classList.remove("mobile-active");
     search.classList.remove("deactive");
@@ -128,22 +125,27 @@ searchBar.addEventListener(
     mobileLanguage.classList.add("active");
     // mobLangSection.style.display="flex";
   },
-  false
+  true
 );
+// document.body.addEventListener(
+//   "keydown",
+//   (event) => {
+//     if (event.key === "Escape") {
+//       if (blackMobileMenu.className.includes("btn-active"))
+//         blackMobileMenu.classList.remove("btn-active");
+//       mobileLanguage.classList.remove("active");
 
-searchCloseMobile.addEventListener("click", () => {
-  searchBar.classList.remove("mobile-active");
-  search.classList.remove("deactive");
-  searchBar.classList.remove("active");
-  searchInput.classList.remove("active");
-  blackMobileMenu.classList.add("btn-active");
-  mobileLanguage.classList.add("active");
-
-  if (mobLangSection.classList.contains("active")) {
-    mobLangSection.classList.remove("active");
-  }
-  // mobLangSection.style.display="flex";
-});
+//       mobileHeavy.classList.remove("heavy-background");
+//       hamburgerHeavy.classList.remove("btn-active");
+//       document.body.style.overflowY = ["scroll"];
+//       searchBar.classList.remove("active");
+//       searchInput.classList.remove("active");
+//       searchBar.classList.remove("mobile-active");
+//       searchInput.classList.remove("active");
+//     }
+//   },
+//   true
+// );
 
 //------------------------------------------------------------------------
 
@@ -299,4 +301,19 @@ window.addEventListener("scroll", function () {
   ) {
     downIcon.classList.remove("active");
   }
+});
+
+async function fetchMovies() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/albums");
+  if (!response.ok) {
+    const message = `Xəta baş verdi! Xəta kodu: ${response.status}`;
+    throw new Error(message);
+  }
+  const movies = await response.json();
+  console.log(movies);
+
+  // return movies;
+}
+fetchMovies().catch((error) => {
+  error.message; // 'An error has occurred: 404'
 });

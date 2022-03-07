@@ -7,16 +7,20 @@
 } */
 .order-box {
   width: 470px;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: row;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   border-bottom: 3px solid var(--faded-red);
-  margin-top: 30px;
 }
-
+.order-box-img {
+  position: relative;
+  bottom: -1px;
+}
 .order-box-content {
-  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .order-box-content p {
@@ -25,11 +29,11 @@
 
 .order-box img {
   height: 100%;
-  margin-top: 1px;
 }
 
 #add-comment {
-  margin-top: 30px;
+  margin-top: 39px;
+  margin-bottom: 44px;
   width: 470px;
   height: 50px;
   border-radius: 5px;
@@ -57,7 +61,6 @@
 }
 
 .product-img.order-img {
-  width: 155px;
   border-bottom-right-radius: 3px;
 }
 .comment-recommend {
@@ -73,19 +76,24 @@
   /* padding-left: 20px; */
   margin-bottom: 30px;
   border-radius: 5px;
+  width: fit-content;
+}
+.order-box-mini .order-box-img {
+  height: 130px;
 }
 
 .order-box-mini img {
   width: 170px;
-  height: 130px;
   margin-top: 0px;
+}
+.order-total-column * {
+  margin: 0;
+  padding: 0;
 }
 
 .order-total-box {
-  margin-top: 30px;
-  padding-top: 10px;
   width: 370px;
-  padding-bottom: 30px;
+  padding: 20px;
   box-shadow: 0 0 2px var(--stroke-gray);
 }
 
@@ -95,7 +103,10 @@
 
 #select-item,
 .recomendation {
-  margin-left: 60px;
+  margin: 0;
+  font-size: 14px;
+  padding: 0;
+  margin-bottom: 27px;
 }
 
 .container-row {
@@ -107,21 +118,18 @@
 .item-total,
 .delivery,
 .total-sum {
-  padding-left: 20px;
-  padding-right: 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-size: 16px;
-  line-height: 5px;
+  margin-bottom: 25px;
 }
 
 .total-sum {
   font-weight: bold;
 }
-
 .order-total-box h4 {
-  padding-left: 20px;
+  margin-bottom: 48px;
 }
 
 .order-total-box button {
@@ -143,15 +151,16 @@
   text-align: center;
   font-size: 14px;
   color: var(--light-grey);
+  margin-bottom: 11px;
 }
 
-.order-box-content {
-  padding-top: 15px;
-  margin-left: 15px;
-}
 .count-regulator {
   background-color: var(--fade-button);
-  margin-left: 10px;
+  width: 109px;
+  padding: 12px 10px;
+  margin-top: 10px;
+  height: 45px;
+  box-sizing: border-box;
 }
 .minus,
 .plus,
@@ -159,22 +168,27 @@
   padding: 0 0;
   color: #4d4d4d;
   font-size: 18px;
+  width: fit-content;
+  height: fit-content;
+  box-shadow: 0px 0px 0px transparent;
 }
 
 .count-x {
-  margin-left: 10px;
   font-weight: bold;
   font-size: 15px;
   color: var(--faded-red);
+  margin-bottom: 3px;
+  display: inline-block;
 }
 
 .price-and-remove {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  margin-top: 27px;
 }
 
 .remove {
-  margin-left: 150px;
   color: var(--light-grey);
   text-decoration: underline;
   cursor: pointer;
@@ -184,20 +198,26 @@
   color: var(--light-grey);
   text-decoration: underline;
   cursor: pointer;
+  font-size: 15px;
+  margin-left: 4%;
 }
 
 .go-to-back {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: 100px;
+  width: 90%;
+  padding: 0 5%;
+  padding-top: 2%;
 }
 
 .tag-order {
   width: 300px;
-  margin-bottom: 60px;
+}
+.tag {
+  margin-bottom: 22px;
 }
 
 .tag-order h4 {
+  margin: 0;
+  padding: 0;
   padding-left: 100px;
 }
 

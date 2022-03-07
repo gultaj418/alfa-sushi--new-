@@ -10,7 +10,7 @@
   .branches.nav-version {
     display: none;
   }
- 
+
   .contact-map img {
     width: 600px !important;
     height: 300px;
@@ -47,7 +47,6 @@
 }
 
 @media only screen and (max-width: 1100px) {
- 
   .crumb-back {
     margin-left: 50px;
   }
@@ -76,7 +75,6 @@
     height: 300px;
     margin-left: 20px;
   }
-    
 }
 
 @media only screen and (max-width: 930px) {
@@ -106,12 +104,12 @@
   /* .container-order-responsive {
     margin: 0 0px;
   } */
-  
+
   .add-item,
   .recommendation-heading {
     margin: 30px 180px;
   }
- 
+
   .crumb-back {
     margin-left: 0px;
   }
@@ -147,7 +145,6 @@
 }
 
 @media only screen and (max-width: 800px) {
-  
   .add-item {
     margin: 30px 170px;
   }
@@ -236,8 +233,8 @@
     opacity: 1;
     visibility: visible;
     width: 70%;
-    left: 13%;
-    top: 10%;
+    left: 5%;
+    top: 20%;
   }
 
   .search-bar {
@@ -358,8 +355,6 @@
     margin-right: 0;
   }
 
-
-
   .black-menu.active {
     visibility: visible;
     opacity: 1;
@@ -422,9 +417,6 @@
 
   /* ------------------about us---------------------- */
 
-
-
-  
   .contact .contact-hr {
     display: block;
     width: 100%;
@@ -452,15 +444,11 @@
     display: none;
   }
 
- 
-
   /*--------------- order page ----------------- */
 
   .tag-order {
     margin-bottom: 0;
   }
-
- 
 
   #select-item {
     display: none;
@@ -541,9 +529,6 @@
 }
 
 @media only screen and (max-width: 550px) {
-  
- 
-
   .crumb-back {
     margin-left: 50px;
   }
@@ -552,9 +537,7 @@
     margin-top: 20px;
     /* margin-bottom: 50px; */
   }
-  
 
-  
   .add-item {
     margin: 30px 50px;
   }
@@ -599,8 +582,6 @@
 }
 
 @media only screen and (max-width: 470px) {
-  
-
   #add-comment {
     width: 99%;
     margin: 20px auto;
@@ -630,9 +611,7 @@
 }
 
 @media only screen and (max-width: 450px) {
-
-
-  #discounts{
+  #discounts {
     padding-top: 30px;
   }
   .call {
@@ -684,8 +663,6 @@
     margin-top: 0px;
     margin-left: 66px;
   }
-
- 
 
   .product-img-mob {
     margin-left: 0px;
@@ -747,8 +724,6 @@
     height: 220px;
   }
 
- 
-
   .second-footer {
     display: flex;
     justify-content: center;
@@ -782,7 +757,6 @@
   .tag-discount h4 {
     margin-left: 0;
   }
- 
 
   .product-img {
     height: 110px;
@@ -815,8 +789,6 @@
 }
 
 @media only screen and (max-width: 400px) {
- 
-
   .discount-img img {
     margin-left: 20px;
     width: 80% !important;
@@ -839,8 +811,6 @@
     margin-left: 45px;
   }
 }
-
-
 
 @media only screen and (max-width: 370px) {
   .discount-img img {
@@ -880,7 +850,6 @@
   .cards {
     width: 100%;
   }
- 
 
   .product-img-mob {
     width: 100% !important;
@@ -908,7 +877,7 @@
 }
 
 @media only screen and (max-width: 300px) {
-   .product-img {
+  .product-img {
     width: 100px !important;
     margin-left: 0px;
   }
@@ -1172,7 +1141,3 @@
     height: 220px;
   }
 }
-
-
-
-
