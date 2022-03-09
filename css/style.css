@@ -6,6 +6,7 @@
   --stroke-gray: #d6d6d6;
   --light-grey: #838383;
   --dark-grey: #4d4d4d;
+  --ultra-dark-grey:#4c4c4c;
   --black-background: #000000;
 }
 
@@ -792,6 +793,7 @@ p {
   border-radius: 5px;
   /* margin-right: 15px; */
   cursor: pointer;
+  transition: all 400ms ease;
 }
 .add-order.active {
   width: 200px;
@@ -813,6 +815,16 @@ p {
 }
 
 /*------------------------------Contact (Get in touch section starts)---------------------------- */
+
+#telephone{
+  text-decoration: none;
+  color: var(--ultra-dark-grey);
+}
+
+#telephone-nav{
+  text-decoration: none;
+  color: var(--text-white);
+}
 
 .contact-hr {
   display: none;
@@ -847,7 +859,7 @@ p {
 .contact-content p {
   /* background-color: red; */
   /* color: var(--gray); */
-  color: #4c4c4c;
+  color: var(--ultra-dark-grey);
   /* background-color: red; */
   text-transform: uppercase;
   font-size: 13px;
@@ -879,7 +891,7 @@ p {
   gap: 0 1rem;
 }
 .contact-content .social-accounts a {
-  color: #4c4c4c;
+  color: var(--ultra-dark-grey);
 }
 .contact-column-first h4,
 .contact-column-second h4 {
@@ -919,7 +931,8 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 60px;
+  /* height: 60px; */
+  background-color: var(--black-background);
 }
 
 .second-footer p {
@@ -940,6 +953,12 @@ footer {
   width: 90%;
   padding: 1.5% 5%;
   justify-content: space-between;
+  flex-direction: column;
+}
+
+.logo-footer{
+  display: flex;
+  justify-content: center;
 }
 
 .footer .logo img {
@@ -973,7 +992,19 @@ footer {
 .branch-adjami {
   margin-right: 200px;
 }
+
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+}
 /*-----------------------------------Second header css css------------------------------------*/
+
+#claradix{
+  text-decoration: none;
+  color: var(--text-white);
+  align-self: flex-end;
+  margin-bottom: 14px;
+}
 
 .second-header {
   width: 100%;
@@ -1027,7 +1058,7 @@ footer {
 
 .crumb {
   text-decoration: none;
-  color: #4c4c4c;
+  color: var(--ultra-dark-grey);
 }
 
 .crumb-back {
