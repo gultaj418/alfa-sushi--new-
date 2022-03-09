@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2% 5%;
+  padding: 0% 5%;
+  height: 95px;
   width: 90%;
 }
 
@@ -80,8 +81,10 @@
 }
 .menu-content ul li {
   list-style-type: none;
+  /* padding-bottom: 4px; */
   cursor: pointer;
-  line-height: 30px;
+  /* line-height: 30px; */
+  margin-bottom: 1rem;
   text-transform: uppercase;
 }
 

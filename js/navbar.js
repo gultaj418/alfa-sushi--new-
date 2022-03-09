@@ -1,6 +1,8 @@
 const search = document.querySelector("#search");
+const rightArrowSearch = document.querySelector(".rightArrowSearch");
+
 const searchMobile = document.querySelector(".search-text");
-const searchCloseMobile= document.querySelector(".searchCloseMobile")
+const searchCloseMobile = document.querySelector(".searchCloseMobile");
 const searchBar = document.querySelector(".search-bar");
 const plusOrder = document.querySelectorAll(".plus");
 const minusOrder = document.querySelectorAll(".minus");
@@ -18,6 +20,8 @@ const downIcon = document.querySelector(".arrow-down-icon");
 const upIcon = document.querySelector(".arrow-up-icon");
 const x = window.matchMedia("(max-width: 768px)");
 let searchInput = document.querySelector(".search-input");
+let input = searchInput.querySelector("input");
+
 let hamburgerHeavy = document.querySelector(".hamburger-heavy");
 const mobileLanguage = document.querySelector(".language-search-mobile");
 // const blackMobileMenu = document.querySelector(".black-menu");
@@ -49,21 +53,86 @@ hamburgerHeavy.addEventListener("click", () => {
 
 searchMobile.addEventListener("click", (e) => {
   searchBar.classList.add("mobile-active");
+  rightArrowSearch.classList.add("deactive");
+  searchCloseMobile.classList.add("active");
   searchInput.classList.add("active");
-  languages.style.display="none";
-  
-
-
+  // mobLangSection.style.display="none";
   blackMobileMenu.classList.remove("btn-active");
   mobileLanguage.classList.remove("active");
-  console.log ("myau");
+  input.focus();
+});
+searchCloseMobile.addEventListener(
+  "click",
+  () => {
+    input.value = "";
+    input.focus();
+  },
+  true
+);
+console.log(searchCloseMobile);
+
+//SEARCH EventListeners
+
+input.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    if (searchBar.className.includes("mobile-active")) {
+      console.log("object");
+    }
+    let searchInput = searchBar.querySelector(".search-input");
+    searchBar.classList.remove("mobile-active");
+    search.classList.remove("deactive");
+    searchBar.classList.remove("active");
+    searchInput.classList.remove("active");
+    blackMobileMenu.classList.add("btn-active");
+    mobileLanguage.classList.add("active");
+    // mobLangSection.style.display="flex";
+  }
 });
 
+search.addEventListener("click", () => {
+  let searchInput = searchBar.querySelector(".search-input");
+  search.classList.add("deactive");
+  searchBar.classList.add("active");
+  searchInput.classList.add("active");
+  navVersionBranch.classList.add("active");
 
-searchCloseMobile.addEventListener("click",()=>{
-  searchInput.classList.remove("active");
-})
+  console.log(searchBar);
+});
 
+document.body.addEventListener(
+  "click",
+  (e) => {
+    if (
+      !e.composedPath().includes(searchBar) &&
+      !e.composedPath().includes(search)
+    ) {
+      searchBar.classList.remove("active");
+      search.classList.remove("deactive");
+      searchInput.classList.remove("active");
+      navVersionBranch.classList.remove("active");
+    }
+  },
+  true
+);
+
+mobileHeavy.addEventListener(
+  "click",
+  () => {
+    console.log("mobileHeavy triggered");
+    if (searchBar.className.includes("mobile-active")) {
+      console.log("object");
+    }
+    let searchInput = searchBar.querySelector(".search-input");
+    searchBar.classList.remove("mobile-active");
+    search.classList.remove("deactive");
+    searchBar.classList.remove("active");
+    searchInput.classList.remove("active");
+    blackMobileMenu.classList.add("btn-active");
+    mobileLanguage.classList.add("active");
+    // mobLangSection.style.display="flex";
+  },
+  true
+);
 //Language changer
 
 langChanger.addEventListener("click", () => {
@@ -89,53 +158,9 @@ mobLangChanger.addEventListener("click", () => {
       lang.classList.remove("active");
     }
     e.target.classList.add("active");
-    // console.log(e.target);
-    // e.target.classList.add("aze");
-    mobLangChanger.textContent = e.target.textContent;
-    // console.log(e.target.textContent);
-    // console.log(e.target.textContent);
-    // if (e.target.textContent !== "A") {
-    //   svgMobileRotator.classList.add("aze");
-    //   svgMobileRotator.classList.remove("rus");
-    //   svgMobileRotator.classList.remove("eng");
 
-    //   console.log(1);
-    // } else if (e.target.textContent === "RUSSIAN") {
-    //   svgMobileRotator.classList.add("rus");
-    //   svgMobileRotator.classList.remove("aze");
-    //   svgMobileRotator.classList.remove("eng");
-    //   console.log(2);
-    // } else {
-    //   svgMobileRotator.classList.add("eng");
-    //   svgMobileRotator.classList.remove("aze");
-    //   svgMobileRotator.classList.remove("rus");
-    //   console.log(3);
-    // }
+    mobLangChanger.textContent = e.target.textContent;
   });
 });
 
 //EventListeners
-
-search.addEventListener("click", () => {
-  let searchInput = searchBar.querySelector(".search-input");
-  search.classList.add("deactive");
-  searchBar.classList.add("active");
-  searchInput.classList.add("active");
-  navVersionBranch.classList.add("active");
-  console.log(searchBar);
-  console.log("myau 2");
-});
-searchBar.addEventListener(
-  "focusout",
-  () => {
-    let searchInput = searchBar.querySelector(".search-input");
-    searchBar.classList.remove("mobile-active");
-    search.classList.remove("deactive");
-    searchBar.classList.remove("active");
-    searchInput.classList.remove("active");
-    blackMobileMenu.classList.add("btn-active");
-    mobileLanguage.classList.add("active");
-    navVersionBranch.classList.remove("active");
-  },
-  false
-);
